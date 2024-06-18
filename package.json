@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/lamunoz01/curso-typescript-avanzado#readme",
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   },

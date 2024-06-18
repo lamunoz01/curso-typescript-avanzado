@@ -3,10 +3,18 @@ import { BaseModel } from '../base.model';
 
 export type Sizes = 'S' | 'M' | 'L' | 'XL';
 
-//Herea la estructura del Base model y agrega los campos particulares de Product
+//Hereda la estructura del Base model y agrega los campos particulares de Product
 export interface Product extends BaseModel {
   title: string;
+  image: string;
+  description: string;
   stock: number;
   size?: Sizes;
-  category: Category;
+  color: string;
+  price: number;
+  category: Category; //Solo deberia enviarse el id no el sub objeto
+  isNew: boolean;
+  tags: string[];
 }
+
+
