@@ -14,3 +14,9 @@ export interface CreateProductDto
 
 //En este caso en vez de omitir campos, indico que campos quiero incluir. Y crea un nuevo tipo con los datos seleccionados.
 type example = Pick<Product, 'color' | 'description'>;
+
+//Defino todos los campos como opcionales para solo actualizar los campos necesarios o que han sufrido cambios.
+// type UpdateProductDto = Partial<Product>
+export interface UpdateProductDto extends Partial<CreateProductDto> {}
+
+// type example2 = Required<Product>;
