@@ -45,5 +45,7 @@ export const updateProduct = (
 /*Servicio de Búsqueda*/
 export const findProducts = (dto: findProductsDto): Product[] => {
   //code ... Para conectar a db o motor de búsqueda
+  // dto.tags=[]; //No permite esto(reasignar)
+  //  dto.tags?.pop();//Peeerooo....Sí permite esto. (con el  cambio en el dto ya saca error con este)
   return products;
 };

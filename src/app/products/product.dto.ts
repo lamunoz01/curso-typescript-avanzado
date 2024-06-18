@@ -21,7 +21,11 @@ export interface UpdateProductDto extends Partial<CreateProductDto> {}
 
 // type example2 = Required<Product>;
 
-//Readonly ....
-export interface findProductsDto extends Readonly<Partial<Product>> {}
+//Readonly .... permite reasignar pero no acceder a métodos de mutación en el caso de los arrays
+//omito tags y asigno nuevo tipado de array de strings a ReadonlyArray de strings
+export interface findProductsDto extends Readonly<Partial<Omit<Product, 'tags'>>> {
+  //Reasignando tipo ... con este ya no permitirá ni reasignar ni mutar un array.
+  tags:ReadonlyArray<string>;
+}
 
 type example3 = Readonly<Product>; 
